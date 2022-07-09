@@ -12,8 +12,14 @@ eureka:
 
 spring:
   cloud:
-    routes:
-      - id: worker-service
-        uri: lb://worker-service
-        predicates:
-          - Path=/worker/**
+    discovery:
+      enabled: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: worker-service
+          uri: lb://worker-service
+          predicates:
+            - Path=/worker/**
