@@ -8,8 +8,8 @@ eureka:
       default-zone: http://localhost:8761/eureka
 spring:
   cloud:
-      routes:
-        - id: worker-service
-          uri: lb://worker-service
-          predicates:
-            - Path=/worker/**
+    routes:
+      - id: worker-service
+        uri: lb://worker-service
+        predicates:
+          - Path=/worker/**
