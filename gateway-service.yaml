@@ -18,4 +18,4 @@ spring:
         - id: worker-service
           uri: http://worker-service
           predicates:
-            - Path=/worker/**
+            - Path=/worker
