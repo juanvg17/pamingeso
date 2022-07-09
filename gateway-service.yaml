@@ -16,6 +16,6 @@ spring:
           enable: true
       routes:
         - id: worker-service
-          uri: http://worker-service
+          uri: lb://worker-service
           predicates:
             - Path=/worker
