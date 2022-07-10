@@ -20,14 +20,14 @@ spring:
           enabled: true
       routes:
         - id: worker-service
-          uri: http://worker-service
+          uri: lb://worker-service
           predicates:
             - Path=/worker/**
         - id: timetable-service
-          uri: http://timetable-service
+          uri: lb://timetable-service
           predicates:
             - Path=/timetable/**
         - id: report-service
-          uri: http://report-service
+          uri: lb://report-service
           predicates:
             - Path=/report/**
