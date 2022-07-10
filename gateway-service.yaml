@@ -27,3 +27,7 @@ spring:
           uri: lb://timetable-service
           predicates:
             - Path=/timetable/**
+        - id: report-service
+          uri: lb://report-service
+          predicates:
+            - Path=/report/**
