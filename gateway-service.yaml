@@ -23,3 +23,7 @@ spring:
           uri: lb://worker-service
           predicates:
             - Path=/worker/**
+        - id: timetable-service
+          uri: lb://timetable-service
+          predicates:
+            - Path=/timetable/**
